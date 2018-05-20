@@ -1,0 +1,24 @@
+{
+  "name": "coffee-maker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "UserInterface.js",
+  "scripts": {
+    "start": "tsc && node dist/test/test-coffee-maker.js",
+    "build": "tsc",
+    "debug": "node --inspect=0.0.0.0:9222 --nolazy dist/test/test-coffee-maker.js",
+    "testing": "mocha 'test/**/*.spec.js' -w",
+    "docker:build": "docker build -t salesforce-outbound .",
+    "docker:up": "docker-compose -f docker-compose.dev.yml up --build -d"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^10.1.2",
+    "nodemon": "^1.17.4",
+    "tslint": "^5.10.0",
+    "tslint-config-airbnb": "^5.9.2",
+    "typescript": "^2.8.3"
+  }
+}

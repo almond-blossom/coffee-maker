@@ -1,0 +1,16 @@
+{
+  "extends": "tslint-config-airbnb",
+  "rules": {
+    "member-ordering": [
+      true,
+      {
+        "order": [
+          "private-instance-field",
+          "public-instance-field",
+          "private-instance-method",
+          "public-instance-method"
+        ]
+      }
+    ]
+  }
+}

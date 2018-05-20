@@ -1,0 +1,22 @@
+version: '3'
+services:
+  coffee-maker:
+    build: .
+    restart: always
+    ports:
+      - '5600:5000'
+      - '9228:9222'
+    volumes:
+      - .:/usr/src/app
+    environment:
+      NODE_ENV: 'development'
+      APP_PORT: '5000'
+    command: [
+      'node_modules/.bin/nodemon',
+      '--ignore',
+      'dist/',
+      '--ext',
+      'ts,js',
+      '--exec',
+      'npm run build && npm run debug'
+    ]
